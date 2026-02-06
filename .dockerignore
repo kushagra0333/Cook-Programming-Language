@@ -1,0 +1,13 @@
+build/
+.git/
+node_modules/
+playground/client/node_modules/
+playground/server/node_modules/
+playground/client/dist/
+out
+out.asm
+out.o
+temp.by
+test_dillusion.by
+.vscode/
+.DS_Store

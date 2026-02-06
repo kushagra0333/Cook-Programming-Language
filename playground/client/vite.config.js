@@ -6,7 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/compile': 'http://localhost:3001'
+      '/compile': {
+        target: 'https://baby-programming-language-web.vercel.app',
+        changeOrigin: true,
+        secure: false,
+      }
     }
   }
 })

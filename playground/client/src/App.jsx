@@ -213,7 +213,7 @@ function App() {
               className="btn-secondary"
               onClick={() =>
                 window.open(
-                  "https://github.com/arjavjain5203/Baby-Programming-language",
+                  "https://github.com/kushagra0333/Baby-Programming-language",
                   "_blank",
                 )
               }
