@@ -1,4 +1,4 @@
-# Baby Programming Language 🍼💔
+# Baby Programming Language
 
 **The only programming language designed specifically for singles.**
 
