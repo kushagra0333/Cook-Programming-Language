@@ -83,35 +83,45 @@ export const CHEAT_SHEET = [
   },
 ];
 
-export const DEFAULT_CODE = `note Relationship Viability Calculator
+export const DEFAULT_CODE = `note The Midnight Snack Loop
 
-recipe calculate_viability(ingredient texts_received, ingredient texts_sent) {
-    note If you send more than you receive... oh no.
-    taste(texts_sent > texts_received * 2) {
-        rest;
-        plate("Stage 5 Clinger Alert.");
-        kitchen_closed(0);
+cookbook
+  WARNING: High calorie count.
+  Proceed with caution.
+cookbook
+
+recipe get_snack_count(ingredient hunger_level) {
+    taste(hunger_level > 8) {
+        plate("Critical hunger detected!");
+        finish(3);
+    } retaste(hunger_level > 4) {
+        plate("Moderate hunger detected.");
+        finish(1);
+    } serve {
+        plate("Not hungry. Go to sleep.");
+        finish(0);
     }
-    
-    ingredient ratio = texts_received * 10 / texts_sent;
-    finish(ratio);
 }
 
-ingredient my_texts = 50;
-ingredient her_texts = 2;
+ingredient my_hunger = 9;
+ingredient snacks_eaten = 0;
 
-plate("Calculating viability...");
+plate("Initiating midnight raid...");
 rest;
 
-ingredient score = calculate_viability(her_texts, my_texts);
+ingredient items_found = get_snack_count(my_hunger);
 
-taste(score < 5) {
-   plate("Viability Score: Low.");
-   rest;
-   plate("It is not you, it is... actually, it is you.");
+simmer(items_found > 0) {
+    plate("Munching on a snack...");
+    items_found = items_found - 1;
+    snacks_eaten = snacks_eaten + 1;
+}
+
+rest;
+taste(snacks_eaten > 0) {
+    plate("Belly full. Happy chef.");
 } serve {
-   plate("Viability Score: Good.");
-   plate("Plan the wedding.");
+    plate("Mission failed. Sad chef.");
 }
 
 kitchen_closed(0);
