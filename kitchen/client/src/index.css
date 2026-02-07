@@ -254,20 +254,30 @@ button:active {
 .split {
   display: flex;
   flex: 1;
-  height: calc(100% - 64px);
+  height: 100%; /* Height handled by wrapper now */
 }
 
 .gutter {
-  background-color: var(--bg-secondary);
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  cursor: col-resize;
-  width: 1px; /* Visual width handled by border in center */
+  background-color: var(--bg-tertiary);
+  background-repeat: no-repeat;
+  background-position: 50%;
   transition: background-color 0.2s;
 }
 
 .gutter:hover {
   background-color: var(--accent-primary);
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.gutter.gutter-vertical {
+  cursor: row-resize;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* Tabs */

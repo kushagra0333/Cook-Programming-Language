@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/compile': {
-        target: 'https://baby-programming-language-web.vercel.app',
+        target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false,
       }
