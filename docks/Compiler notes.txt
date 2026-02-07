@@ -10,23 +10,23 @@ code -> (compiler)-> Assembly ->(assembler) -> object file ->(linker) combine li
 
 ## to build the compiler
 
-arjav-jain@arjav-jain-Inspiron-15-3520:~/Coding/baby$ cmake --build build/
+kushagrapandey:~/Home/Desktop/Code/Cook$ cmake --build build/
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/arjav-jain/Coding/baby/build
-[ 50%] Building CXX object CMakeFiles/baby.dir/src/main.cpp.o
+-- Build files have been written to: Home/Desktop/Code/Cook$
+[ 50%] Building CXX object CMakeFiles/cook.dir/src/main.cpp.o
 [100%] Linking CXX executable baby
 [100%] Built target baby
-arjav-jain@arjav-jain-Inspiron-15-3520:~/Coding/baby$ cmake -S . -B build/
+kushagrapandey:~/Home/Desktop/Code/Cook$ cmake -S . -B build/
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/arjav-jain/Coding/baby/build
-arjav-jain@arjav-jain-Inspiron-15-3520:~/Coding/baby$ ./build/baby
+-- Build files have been written to: Home/Desktop/Code/Cook$
+kushagrapandey:~/Home/Desktop/Code/Cook$ ./build/cook
 you enter wrong less number of arguments
 baby <input.by>
-arjav-jain@arjav-jain-Inspiron-15-3520:~/Coding/baby$ ./build/baby temp.by //it genrates the assembly code, object file and executable only
-arjav-jain@arjav-jain-Inspiron-15-3520:~/Coding/baby$ ./out // it runs the executable file
-arjav-jain@arjav-jain-Inspiron-15-3520:~/Coding/baby$ echo $? // it shows the exit code of the executable file
+kushagrapandey:~/Home/Desktop/Code/Cook$ ./build/cook temp.by //it genrates the assembly code, object file and executable only
+kushagrapandey:~/Home/Desktop/Code/Cook$ ./out // it runs the executable file
+kushagrapandey:~/Home/Desktop/Code/Cook$ echo $? // it shows the exit code of the executable file
 
 
 
